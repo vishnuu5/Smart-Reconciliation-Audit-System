@@ -4,8 +4,11 @@ A full-stack MERN application that enables users to upload transaction data, rec
 
 ## Urls links
 
-Git Link: [View Git](https://github.com/vishnuu5/Smart-Reconciliation-Audit-System.git)
-Demo Link: [Demo Project]()
+**Git Link**
+[View Git](https://github.com/vishnuu5/Smart-Reconciliation-Audit-System.git)
+
+**Demo Link**
+[Demo Project]()
 
 ## Tech Stack
 
