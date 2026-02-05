@@ -50,7 +50,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="hidden sm:block text-right text-xs sm:text-sm">
+            <div className="text-right text-xs sm:text-sm">
               <p className="font-semibold">{user?.name || "User"}</p>
               <p className="text-gray-400">{user?.role || "Viewer"}</p>
             </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
             >
               <Menu size={24} />
             </button>
-            <div className="hidden md:block relative">
+            <div className="relative">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="bg-primary p-2 rounded-full hover:bg-blue-600 transition duration-200"
@@ -89,6 +89,10 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-dark-700 border-t border-dark-600">
           <div className="px-4 py-3 space-y-3 max-w-7xl mx-auto">
+            <div className="text-right text-sm border-b border-dark-600 pb-3">
+              <p className="font-semibold">{user?.name || "User"}</p>
+              <p className="text-gray-400">{user?.role || "Viewer"}</p>
+            </div>
             <a
               href="/dashboard"
               className="block px-3 py-2 rounded hover:bg-dark-600 transition text-sm font-medium"
