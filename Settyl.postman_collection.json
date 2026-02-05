@@ -1,0 +1,668 @@
+{
+  "info": {
+    "_postman_id": "da7d94af-a237-4da1-b775-171063a98483",
+    "name": "Settyl",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33424407"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"v1@example.com\",\r\n  \"password\": \"p12345\",\r\n  \"name\": \"vishnu\",\r\n  \"role\": \"Admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"v@example.com\",\r\n  \"password\": \"p12345\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/auth/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/auth/logout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "auth",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload File",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "columnMapping",
+              "value": "{\"transactionId\": \"id\", \"amount\": \"value\"}",
+              "type": "text",
+              "uuid": "087f6395-b15f-45a8-ac34-34021c45afff"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "66db55ae-b79c-4a75-b376-0ab9200f2a19",
+              "src": "postman-cloud:///1f102753-2103-4c30-ba03-74dc1e5e1b17"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List User's Uploads",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/upload?page=1&limit=20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "upload"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Upload Job Status",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/upload/:698459ac9cd0e166cba45cb1\"",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "upload",
+            ":698459ac9cd0e166cba45cb1\""
+          ],
+          "variable": [
+            {
+              "key": "698459ac9cd0e166cba45cb1\"",
+              "value": "698463099cd0e166cba45d39"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Map Columns",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"mapping\": {\r\n    \"col1\": \"transactionId\",\r\n    \"col2\": \"referenceNumber\", \r\n    \"col3\": \"amount\",\r\n    \"col4\": \"date\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/upload/:698432148a306d67a3835018/map-columns",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "upload",
+            ":698432148a306d67a3835018",
+            "map-columns"
+          ],
+          "variable": [
+            {
+              "key": "698432148a306d67a3835018",
+              "value": "698463099cd0e166cba45d39"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Reconciliation Results",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/reconciliation?uploadJobId=698463099cd0e166cba45d39&status=Matched&page=1&limit=20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "reconciliation"
+          ],
+          "query": [
+            {
+              "key": "uploadJobId",
+              "value": "698463099cd0e166cba45d39"
+            },
+            {
+              "key": "status",
+              "value": "Matched"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Reconciliation Stats",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/reconciliation/stats?uploadJobId=698463099cd0e166cba45d39",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "reconciliation",
+            "stats"
+          ],
+          "query": [
+            {
+              "key": "uploadJobId",
+              "value": "698463099cd0e166cba45d39"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Record Details",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/reconciliation/:698432148a306d67a3835018",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "reconciliation",
+            ":698432148a306d67a3835018"
+          ],
+          "variable": [
+            {
+              "key": "698432148a306d67a3835018",
+              "value": "698463099cd0e166cba45d44"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Correct Record (Manual)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"correctedData\": {\r\n    \"transactionId\": \"TXN-001-CORRECTED\",\r\n    \"amount\": 1100.0,\r\n    \"uploadedData\": {\r\n      \"description\": \"Updated description\"\r\n    }\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/reconciliation/:recordId",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "reconciliation",
+            ":recordId"
+          ],
+          "variable": [
+            {
+              "key": "recordId",
+              "value": "698463099cd0e166cba45d44"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "List Audit Logs",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/audit?action=UPDATE&source=System&startDate=2024-01-01&endDate=2024-01-31&page=1&limit=20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "audit"
+          ],
+          "query": [
+            {
+              "key": "action",
+              "value": "UPDATE"
+            },
+            {
+              "key": "source",
+              "value": "System"
+            },
+            {
+              "key": "startDate",
+              "value": "2024-01-01"
+            },
+            {
+              "key": "endDate",
+              "value": "2024-01-31"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "20"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Record Audit Trail",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/audit/:recordId?page=1&limit=50",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "audit",
+            ":recordId"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "50"
+            }
+          ],
+          "variable": [
+            {
+              "key": "recordId",
+              "value": "698463099cd0e166cba45d44"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Export Audit Logs",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/audit/export?recordId=698463099cd0e166cba45d44&startDate=2024-01-01&endDate=2026-02-06",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "audit",
+            "export"
+          ],
+          "query": [
+            {
+              "key": "recordId",
+              "value": "698463099cd0e166cba45d44"
+            },
+            {
+              "key": "startDate",
+              "value": "2024-01-01"
+            },
+            {
+              "key": "endDate",
+              "value": "2026-02-06"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Dashboard Summary",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/dashboard/summary?uploadJobId=698463099cd0e166cba45d39&startDate=2024-01-01&endDate=2026-02-07",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "dashboard",
+            "summary"
+          ],
+          "query": [
+            {
+              "key": "uploadJobId",
+              "value": "698463099cd0e166cba45d39"
+            },
+            {
+              "key": "startDate",
+              "value": "2024-01-01"
+            },
+            {
+              "key": "endDate",
+              "value": "2026-02-07"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Filter Options",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/dashboard/filters",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "dashboard",
+            "filters"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Chart Data",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ODQ1N2JiOWNkMGUxNjZjYmE0NWNhNyIsImlhdCI6MTc3MDI4MDk5NywiZXhwIjoxNzcwODg1Nzk3fQ.A3ID6r9Y4BTP7__XYWxohiu4yZrOqohN5OOGuYcNCl8",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/dashboard/chart?uploadJobId=698463099cd0e166cba45d39",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "dashboard",
+            "chart"
+          ],
+          "query": [
+            {
+              "key": "uploadJobId",
+              "value": "698463099cd0e166cba45d39"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
